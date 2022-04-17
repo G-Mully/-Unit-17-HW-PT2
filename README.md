@@ -29,7 +29,15 @@ Vulnerability Exploited:<br>
 
 
 <b>Vulnerability Explanation:</b>
-Icecast application running on 192.168.0.20 allows for a buffer overflow exploit where an attacker can remotely connect and take control of the victim's system by overwriting the memory on the system on utilizing the Icecast flaw, which writes past the end of a pointer array when receiving 32 HTTP headers.
+Icecast is an audio broadcast system that streams music in both MP3 and
+Ogg Vorbis format. The Icecast server accepts a maximum of 32 headers in the clients HTTP request.
+
+In some environments (like in Win32) a request with more than 31 headers causes the overwriting of the return address of the vulnerable function with a pointer to the beginning of the 32th header.
+
+In short, is possible to execute remote code simply using the normal
+HTTP request plus 31 headers followed by a shellcode that will be
+executed directly without the need of calling/jumping to registers or
+addresses or using other annoying techniques.
 
 <br>
 
@@ -40,15 +48,19 @@ CVSS Score - 7.5 (HIGH)
 |-----------------|----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Confidentiality | Partial  | There is considerable informational disclosure                                                                                                                                            |
 | Integrity       | Partial  | Modification of some system files or information is possible, but the  attacker does not have control over what can be modified, or the scope  of what the attacker can affect is limited |
-| Availability    | Partial  | There is reduced performance or interruptions in resource availability                                                                                                                    |                                                          
+| Availability    | Partial  | There is reduced performance or interruptions in resource availability                                                                                                                    |                                        
+---
 
-Finding 2
-Machine IP:
-129.168.0.20
-Hostname:
-MSEDGEWIN10
-Vulnerability Exploited:
-exploit/windows/local/ikeext_service
+
+<br>
+
+### Finding 2
+Machine IP: 129.168.0.20<br>
+Hostname: MSEDGEWIN10<br>
+
+Vulnerability Exploited:<br>
+- exploit/windows/local/ikeext_service<br>
+
 Vulnerability Explanation:
 Explain the vulnerability as best you can by explaining the attack type (i.e. is it a heap overflow attack, buffer overflow, file inclusion, etc.?) and briefly summarize what that attack is (Might need Google's help!)
 Severity:
