@@ -16,8 +16,6 @@ When performing the internal penetration test, there were several alarming vulne
 
 ---
 
-<br>
-
 ### Finding 1
 Machine IP: 129.168.0.20<br>
 Hostname: MSEDGEWIN10<br>
