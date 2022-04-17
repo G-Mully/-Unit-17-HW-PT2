@@ -23,9 +23,6 @@ Vulnerability Exploited:<br>
 - exploit/windows/http/icecast_header<br>
 - Port 8000/tcp open - Icecast streaming media server
 
-<br>
-
-
 <b>Vulnerability Explanation:</b>
 Icecast is an audio broadcast system that streams music in both MP3 and
 Ogg Vorbis format. The Icecast server accepts a maximum of 32 headers in the clients HTTP request.
@@ -51,7 +48,6 @@ CVSS Score - 7.5 (HIGH)
 ### Finding 2
 Machine IP: 129.168.0.20<br>
 Hostname: MSEDGEWIN10<br>
-
 Vulnerability Exploited:<br>
 - exploit/windows/local/ikeext_service<br>
 
@@ -73,16 +69,31 @@ CVSS Score - 9.3 (CRITICAL)
 | Integrity         | Complete | There is a total compromise of system integrity. There is a complete loss of system  protection, resulting in the entire system being compromised |
 | Availability      | Complete | There is a total shutdown of the affected resource. The attacker can render the  resource completely unavailable.                                 |
 | Access Complexity | Medium   | The access conditions are somewhat specialized. Some preconditions must be satisfied  to exploit                                                  |
+---
 
-Finding 3
-Machine IP:
-129.168.0.20
-Hostname:
-MSEDGEWIN10
-Vulnerability Exploited:
-exploit/windows/local/ms16_075_reflection
-Vulnerability Explanation:
-Explain the vulnerability as best you can by explaining the attack type (i.e. is it a heap overflow attack, buffer overflow, file inclusion, etc.?) and briefly summarize what that attack is (Might need Google's help!)
+### Finding 3
+Machine IP: 129.168.0.20<br>
+Hostname: MSEDGEWIN10<br>
+Vulnerability Exploited:<br>
+- exploit/windows/local/ms16_075_reflection<br>
+
+
+<b>Vulnerability Explanation:</b>
+
+
+
+
 Severity:
-In your expert opinion, how severe is this vulnerability?
-Proof of Concept:
+CVSS Score - 6.9 (HIGH)
+| Area Impact       | Severity | Outcome                                                                                                                                           |
+|-------------------|----------|---------------------------------------------------------------------------------------------------------------------------------------------------|
+| Confidentiality   | Complete | There is total information disclosure, resulting in all system files being revealed                                                               |
+| Integrity         | Complete | There is a total compromise of system integrity. There is a complete loss of system  protection, resulting in the entire system being compromised |
+| Availability      | Complete | There is a total shutdown of the affected resource. The attacker can render the  resource completely unavailable.                                 |
+| Access Complexity | Medium   | The access conditions are somewhat specialized. Some preconditions must be satisfied  to exploit                                                  |        
+
+---
+
+<br>
+
+## Proof of Concept:
