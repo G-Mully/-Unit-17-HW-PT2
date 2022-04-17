@@ -79,9 +79,11 @@ Vulnerability Exploited:<br>
 
 
 <b>Vulnerability Explanation:</b>
+An elevation of privilege vulnerability exists in the Microsoft Server Message Block (SMB) when an attacker forwards an authentication request intended for another service running on the same machine. An attacker who successfully exploited this vulnerability could execute arbitrary code with elevated permissions.
 
+To exploit the vulnerability, an attacker would first have to log on to the system. An attacker could then run a specially crafted application that could exploit the vulnerability and take control of an affected system. The update addresses the vulnerability by correcting how Windows Server Message Block (SMB) Server handles credential forwarding requests.
 
-
+<br>
 
 Severity:
 CVSS Score - 6.9 (HIGH)
