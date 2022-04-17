@@ -16,9 +16,9 @@ When performing the internal penetration test, there were several alarming vulne
 
 ---
 
+<br>
 
 ### Finding 1
-<br>
 Machine IP: 129.168.0.20<br>
 Hostname: MSEDGEWIN10<br>
 Vulnerability Exploited:<br>
@@ -26,6 +26,7 @@ Vulnerability Exploited:<br>
 - Port 8000/tcp open - Icecast streaming media server
 
 <br>
+
 
 <b>Vulnerability Explanation:</b>
 Icecast application running on 192.168.0.20 allows for a buffer overflow exploit where an attacker can remotely connect and take control of the victim's system by overwriting the memory on the system on utilizing the Icecast flaw, which writes past the end of a pointer array when receiving 32 HTTP headers.
