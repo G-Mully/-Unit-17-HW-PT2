@@ -59,11 +59,24 @@ Hostname: MSEDGEWIN10<br>
 Vulnerability Exploited:<br>
 - exploit/windows/local/ikeext_service<br>
 
-Vulnerability Explanation:
-Explain the vulnerability as best you can by explaining the attack type (i.e. is it a heap overflow attack, buffer overflow, file inclusion, etc.?) and briefly summarize what that attack is (Might need Google's help!)
-Severity:
-In your expert opinion, how severe is this vulnerability?
-Proof of Concept:
+
+<b>Vulnerability Explanation:</b>
+ This vulnerability could allow an attacker to execute malicious code on a target system by sending specially crafted network packets. If the targeted server utilises the HTTP Protocol Stack (http.sys) to process these packets, an attacker can execute malicious code on the machine without having any authentication or user interaction required.
+
+Since this is a service running with higher privileges than a normal user this bug is wormable as well.
+
+Attacks will probably mostly be aimed at Windows Servers but Windows 10/11 are potentially vulnerable to this as well depending on the configuration so make sure to check your endpoints as well as your servers.
+
+<br>
+
+Severity: 
+CVSS Score - 9.3 (CRITICAL)
+| Area Impact       | Severity | Outcome                                                                                                                                           |
+|-------------------|----------|---------------------------------------------------------------------------------------------------------------------------------------------------|
+| Confidentiality   | Complete | There is total information disclosure, resulting in all system files being revealed                                                               |
+| Integrity         | Complete | There is a total compromise of system integrity. There is a complete loss of system  protection, resulting in the entire system being compromised |
+| Availability      | Complete | There is a total shutdown of the affected resource. The attacker can render the  resource completely unavailable.                                 |
+| Access Complexity | Medium   | The access conditions are somewhat specialized. Some preconditions must be satisfied  to exploit                                                  |
 
 Finding 3
 Machine IP:
