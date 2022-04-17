@@ -16,7 +16,6 @@ When performing the internal penetration test, there were several alarming vulne
 
 ---
 
-<br>
 
 ### Finding 1
 <br>
