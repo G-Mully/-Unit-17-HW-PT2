@@ -31,14 +31,16 @@ Vulnerability Exploited:<br>
 <b>Vulnerability Explanation:</b>
 Icecast application running on 192.168.0.20 allows for a buffer overflow exploit where an attacker can remotely connect and take control of the victim's system by overwriting the memory on the system on utilizing the Icecast flaw, which writes past the end of a pointer array when receiving 32 HTTP headers.
 
-Severity: 
-CVSS Score -7.5 (high)
+<br>
 
-| Area Impact            | Severity | Outcome                                                                                                                                                                                   |
-|------------------------|----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Confidentiality Impact | Partial  | There is considerable informational disclosure                                                                                                                                            |
-| Integrity Impact       | Partial  | Modification of some system files or information is possible, but the  attacker does not have control over what can be modified, or the scope  of what the attacker can affect is limited |
-| Availability Impact    | Partial  | There is reduced performance or interruptions in resource availability                                                                      
+Severity: 
+CVSS Score - 7.5 (HIGH)
+
+| Area Impact     | Severity | Outcome                                                                                                                                                                                   |
+|-----------------|----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Confidentiality | Partial  | There is considerable informational disclosure                                                                                                                                            |
+| Integrity       | Partial  | Modification of some system files or information is possible, but the  attacker does not have control over what can be modified, or the scope  of what the attacker can affect is limited |
+| Availability    | Partial  | There is reduced performance or interruptions in resource availability                                                                                                                    |                                                          
 
 Finding 2
 Machine IP:
