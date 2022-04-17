@@ -48,10 +48,6 @@ CVSS Score - 7.5 (HIGH)
 | Integrity       | Partial  | Modification of some system files or information is possible, but the  attacker does not have control over what can be modified, or the scope  of what the attacker can affect is limited |
 | Availability    | Partial  | There is reduced performance or interruptions in resource availability                                                                                                                    |                                        
 ---
-
-
-<br>
-
 ### Finding 2
 Machine IP: 129.168.0.20<br>
 Hostname: MSEDGEWIN10<br>
@@ -61,7 +57,7 @@ Vulnerability Exploited:<br>
 
 
 <b>Vulnerability Explanation:</b>
- This vulnerability could allow an attacker to execute malicious code on a target system by sending specially crafted network packets. If the targeted server utilises the HTTP Protocol Stack (http.sys) to process these packets, an attacker can execute malicious code on the machine without having any authentication or user interaction required.
+This vulnerability could allow an attacker to execute malicious code on a target system by sending specially crafted network packets. If the targeted server utilises the HTTP Protocol Stack (http.sys) to process these packets, an attacker can execute malicious code on the machine without having any authentication or user interaction required.
 
 Since this is a service running with higher privileges than a normal user this bug is wormable as well.
 
