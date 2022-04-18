@@ -99,3 +99,36 @@ CVSS Score - 6.9 (HIGH)
 <br>
 
 ## Proof of Concept:
+
+To better explain the findings we will show how we went about getting our results.  With full access to the network we decided to begin with network scan to see what ports were open on the CEO's workstation.
+
+![](Images/nmap_scan.PNG)
+
+As we can see here one of the open ports & exploits is Icecast on port 8000. Lets see if there are any exploits for Icecast
+
+![](Images/searchsploit_icecast.PNG)
+
+As we can see there are more than half a dozen exploits.  Let's move into our Metasploit console and see what exact exploits there are available
+
+![](Images/msfconsole_startup.PNG)
+
+Searching for Icecast exploits brings up only one exploit.
+
+![](Images/search_icecast.PNG)
+
+So with the one exploit lets launch and setup the Icecast exploit.
+
+![](Images/use_icecast_header.PNG)
+
+Now that we are in lets setup the exploit to target the CEO's machine.
+
+![](Images/set_rhosts.PNG)
+
+With that setup we can now launch the exploit.
+
+![](Images/exploit.PNG)
+
+The exploit is successful and has tunnled in.  We now have a full meterpreter session running on the CEO's machine. From here we can perform mutiple searches to locate and display confidential PII.  Here are some of the files we found.
+
+![](Images/search_secretfile.PNG)
+![](Images/search_recipe.PNG)
