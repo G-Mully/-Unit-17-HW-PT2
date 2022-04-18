@@ -147,7 +147,14 @@ Continuing on with the findings, regarding the other expliots we ran our suggest
 
 ![](Images/exploit_suggester.PNG)
 
-And as talked about there are the two other exploits that are present on the CEO's machine that are discussed in findings 2 & 3 up above. Other actions we were able to take included opening a direct C:\ prompt shell, gathering the system information, and finding out what users are logged on currently.
+And as talked about there are the two other exploits that are present on the CEO's machine that are discussed in findings 2 & 3 up above.
+
+<br> 
+Other actions we were able to take included: 
+- opening a direct C:\ prompt shell
+- gathering the system information
+- finding out what users are logged on currently
+<br>
 
 ![](Images/shell.PNG)
 ![](Images/sysinfo.PNG)
