@@ -151,9 +151,11 @@ And as talked about there are the two other exploits that are present on the CEO
 
 <br> 
 Other actions we were able to take included: 
+
 - opening a direct C:\ prompt shell
 - gathering the system information
 - finding out what users are logged on currently
+
 <br>
 
 ![](Images/shell.PNG)
