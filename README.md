@@ -132,3 +132,25 @@ The exploit is successful and has tunnled in.  We now have a full meterpreter se
 
 ![](Images/search_secretfile.PNG)
 ![](Images/search_recipe.PNG)
+
+Now that we have found the files lets see what is inside of them.
+
+![](Images/cat_user_secretfile.PNG)
+![](Images/cat_recipe.PNG)
+
+We can even download the information over to our Kali VM if we so choose to do so.
+
+![](Images/download_recipe.PNG)
+![](Images/download_recipe2.PNG)
+
+Continuing on with the findings, regarding the other expliots we ran our suggester to see what other exploits your machine was vulnerable to.
+
+![](Images/exploit_suggester.PNG)
+
+And as talked about there are the two other exploits that are present on the CEO's machine that are discussed in findings 2 & 3 up above. Other actions we were able to take included opening a direct C:\ prompt shell, gathering the system information, and finding out what users are logged on currently.
+
+![](Images/shell.PNG)
+![](Images/sysinfo.PNG)
+![](Images/logged_on%20_users.PNG)
+
+---
