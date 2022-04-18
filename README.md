@@ -21,7 +21,7 @@ Machine IP: 129.168.0.20<br>
 Hostname: MSEDGEWIN10<br>
 Vulnerability Exploited:<br>
 - exploit/windows/http/icecast_header<br>
-- Port 8000/tcp open - Icecast streaming media server
+- Icecast Streaming Media Server - CVE-2022-21849
 
 <b>Vulnerability Explanation:</b>
 Icecast is an audio broadcast system that streams music in both MP3 and
@@ -50,7 +50,7 @@ Machine IP: 129.168.0.20<br>
 Hostname: MSEDGEWIN10<br>
 Vulnerability Exploited:<br>
 - exploit/windows/local/ikeext_service<br>
-
+- Windows IKE Extension Remote Code Execution Vulnerability - CVE-2022-21849
 
 <b>Vulnerability Explanation:</b>
 This vulnerability could allow an attacker to execute malicious code on a target system by sending specially crafted network packets. If the targeted server utilises the HTTP Protocol Stack (http.sys) to process these packets, an attacker can execute malicious code on the machine without having any authentication or user interaction required.
@@ -76,6 +76,7 @@ Machine IP: 129.168.0.20<br>
 Hostname: MSEDGEWIN10<br>
 Vulnerability Exploited:<br>
 - exploit/windows/local/ms16_075_reflection<br>
+- Windows SMB Server Exploit - CVE-2016-3225
 
 
 <b>Vulnerability Explanation:</b>
@@ -163,3 +164,24 @@ Other actions we were able to take included:
 ![](Images/logged_on%20_users.PNG)
 
 ---
+
+### Recommendations
+
+There are some simple actions that can be taken to mitigate and in some cases eliminate the exploits presented here.
+
+- <b>Icecast Exploit</b> - To fix this simply install the latest version of icecast software or in this case Version 2.0.2.
+- <b>Windows IKE Extension Remote Code Execution Vulnerability</b> - Update all of your machines and servers with the latest patches.  Microsoft fixed this in Jan 2022 so the patch is already out.
+- <b>Windows SMB Server Exploit</b> - The security patch for this exploit has been out since June 2016. Simply ensure you have the latest updates if you don't already.
+
+<br>
+
+Other reccomendations include the following as a general good practice. 
+
+
+1. Any and all PII should always be encrypted and sectioned off from all employees except with those with a need to know.
+2. Close off any non-essential inbound ports.  Each one of these open provide hackers an open avenue to run exploits.  We can mitigate this by simply closing ports that have no business being open.
+3. Use https where ever possible to ensure secure point to point communications.  It is highly reccommended to upgrade any sites/services that still use http:// protocols.
+
+---
+<br>
+Thank you for allowing us the opportunity to serve you.
